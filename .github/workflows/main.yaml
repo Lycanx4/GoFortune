@@ -42,7 +42,7 @@ jobs:
           {
             "blocks": [
               {
-                "type": "plain_text",
+                "type": "header",
                 "text": {
                   "type": "plain_text",
                   "text": "DipSA55 CI/CD Assignment Submission"                
@@ -66,7 +66,7 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text":"*Email:*\n<e1045750@u.nus.edu>"
+                    "text":"*Email:*\n<mailto:e1045750@u.nus.edu|e1045750@u.nus.edu>"
                   },
                   {
                     "type": "mrkdwn",
@@ -88,7 +88,7 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text":"*<svc-gofortune-production.up.railway.app|Open Application>"
+                    "text":"<svc-gofortune-production.up.railway.app|Open Application>"
                   }               
                 ]
               }
