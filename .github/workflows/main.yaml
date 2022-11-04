@@ -3,7 +3,7 @@ name: Release and deploy Go Fortune
 on:
   push:
     branches:
-      - "v[0-99].[0-99]"
+      - "v[0-9][0-9].[0-9][0-9]"
 
 # Jobs in the workflow
 jobs:
