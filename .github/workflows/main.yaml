@@ -32,7 +32,7 @@ jobs:
     - name: Deploy
       run: railway up
       env:
-        Kaung-Token: ${{ secrets.RAILWAY_TOKEN }}
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
     - name: Send Slack Notification
       id: slak
