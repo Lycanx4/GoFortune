@@ -34,7 +34,7 @@ jobs:
       env:
         Kaung-Token: ${{ secrets.RAILWAY_TOKEN }}
 
-    - name: Send Slak Notification
+    - name: Send Slack Notification
       id: slak
       uses: slackapi/slack-github-action@v1.23.0
       with:
