@@ -79,7 +79,7 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text":"*Deployment:*\n<svc-gofortune-production.up.railway.app>"
+                    "text":"*Deployment:*\n<https://svc-gofortune-production.up.railway.app>"
                   }               
                 ]
               },
@@ -88,7 +88,7 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text":"<svc-gofortune-production.up.railway.app|Open Application>"
+                    "text":"<https://svc-gofortune-production.up.railway.app | Open Application>"
                   }               
                 ]
               }
