@@ -21,5 +21,79 @@ jobs:
       with:
         ref: ${{ github.ref_name }}
 
-    - name: List my current directory after Checkout
-      run: ls -la
+    - name: Use Node 16
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16
+
+    - name: Install Railway
+      run: npm i -g @railway/cli
+
+    - name: Deploy
+      run: railway up
+      env:
+        Kaung-Token: ${{ secrets.RAILWAY_TOKEN }}
+
+    - name: Send Slak Notification
+      id: slak
+      uses: slackapi/slack-github-action@v1.23.0
+      with:
+        payload: |
+          {
+            "blocks": [
+              {
+                "type": "plain_text",
+                "text": {
+                  "type": "plain_text",
+                  "text": "DipSA55 CI/CD Assignment Submission"                
+                }              
+              },
+              {
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text":"*Name:*\nKaung Myat Lwin"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text":"*Metriculation:\nA0265075B"
+                  }                
+                ]
+              },
+              {
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text":"*Email:*\n<e1045750@u.nus.edu>"
+                  },
+                  {
+                    "type": "mrkdwn",
+                    "text":"*Repository:*\n<https://github.com/Lycanx4/GoFortune>"
+                  }                
+                ]
+              },
+              {
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text":"*Deployment:*\n<svc-gofortune-production.up.railway.app>"
+                  }               
+                ]
+              },
+              {
+                "type": "section",
+                "fields": [
+                  {
+                    "type": "mrkdwn",
+                    "text":"*<svc-gofortune-production.up.railway.app|Open Application>"
+                  }               
+                ]
+              }
+            ]
+          }
+      env:
+        SLAK_WEBHOOK_URL: ${{ sectets.SLACK_HOOK }}
+        SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
