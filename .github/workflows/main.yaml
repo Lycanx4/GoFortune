@@ -1,4 +1,4 @@
-name: CICD_CA Go_Fortune
+name: CICD Go_Fortune
 #trigger
 on:
   push:
