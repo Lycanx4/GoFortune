@@ -11,7 +11,7 @@ jobs:
   mrelease-and-deploy:
     #OS that this workflow will be running on 1
     runs-on: ubuntu-latest
-    if: !startsWith(github.event.head_commit.message, '#NORUN')
+    if: ! startsWith(github.event.head_commit.message, '#NORUN')
     #list of steps to perform task
     steps: 
     - name: Echo the branch name
