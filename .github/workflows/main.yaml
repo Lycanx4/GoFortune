@@ -63,7 +63,7 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text":"*Metriculation:\nA0265075B"
+                    "text":"*Matriculation:*\nA0265075B"
                   }                
                 ]
               },
