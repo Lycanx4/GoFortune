@@ -1,4 +1,4 @@
-name: Release and deploy Go Fortune
+name: Release and deploy Go_Fortune
 #trigger
 on:
   push:
