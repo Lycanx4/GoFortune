@@ -76,7 +76,7 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text":"*Repository:*\n< ${{ github.repositoryURL }}>"
+                    "text":"*Repository:*\n<${{ github.repositoryURL }}>"
                   }                
                 ]
               },
