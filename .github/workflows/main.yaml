@@ -76,7 +76,7 @@ jobs:
                   },
                   {
                     "type": "mrkdwn",
-                    "text":"*Repository:*\n<https://github.com/Lycanx4/GoFortune>"
+                    "text":"*Repository:*\n< ${{ github.repositoryURL }}>"
                   }                
                 ]
               },
@@ -85,7 +85,7 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text":"*Deployment:*\n<https://svc-gofortune-production.up.railway.app>"
+                    "text":"*Deployment:*\n<${{ secrets.RAILWAY_URL }}>"
                   }               
                 ]
               },
@@ -94,7 +94,7 @@ jobs:
                 "fields": [
                   {
                     "type": "mrkdwn",
-                    "text":"<https://svc-gofortune-production.up.railway.app | Open Application>"
+                    "text":"<${{ secrets.RAILWAY_URL }}| Open Application>"
                   }               
                 ]
               }
